@@ -1,3 +1,146 @@
 @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2? family= Bebas+Neue & family= PT+Mono & display=swap');
+
+:root {
+  --var01: #3b8b56;
+  --var02: #132835;
+  --var03: #51b3ec;
+  --var04: #fff;
+  --var05: #4a9fcf;
+  --var06: #193446;
+  --var07: #ccc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Bebas Neue', serif;
+}
+
+header {
+  position: fixed;
+  background: var(--var02);
+  padding: 20px;
+  width: 100%;
+  height: 30px;
+}
+
+.left h3 {
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.left span {
+  color: var(--var03);
+}
+
+.sair_btn {
+  background: var(--var03);
+  text-decoration: none;
+  float: right;
+  margin-top: -30px;
+  margin-right: 40px;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--var04);
+  transition: 0.5s;
+  transition-property: background;
+}
+
+.sair_btn:hover {
+  background: var(--var05);
+}
+
+.sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  margin-top: 70px;
+  padding-top: 30px;
+  left: 0;
+  background: var(--var06);
+  transition: 0.5s;
+  transition-property: left;
+}
+
+.sidebar .image {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}
+
+.sidebar h2 {
+  color: var(--var007);
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  color: var(--var04);
+  display: block;
+  width: 100%;
+  line-height: 60px;
+  text-decoration: none;
+  padding-left: 40px;
+  box-sizing: border-box;
+  transition-property: background;
+}
+
+.sidebar a:hover {
+  background: var(--var03);
+}
+
+.sidebar ion-icon {
+  padding-right: 10px;
+}
+
+label #sidebar_btn {
+  z-index: 1;
+  position: fixed;
+  left: 300px;
+  color: var(--var04);
+  font-size: 26px;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: 0.5s;
+  transition-property: color;
+}
+
+label #sidebar_btn:hover {
+  color: var(--var03);
+}
+
+#check:checked ~ .sidebar {
+  left: -190px;
+}
+
+#check:checked ~ .sidebar a span {
+  display: none;
+}
+
+#check:checked ~ .sidebar a {
+  font-size: 20px;
+  margin-left: 170px;
+  width: 80px;
+}
+
+.content {
+  background: url(imagens/fundo3.webp) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  transition: 0.5s;
+}
+
+#check:checked ~ .content {
+  margin-left: 60px;
+}
+
+#check {
+  display: none;
+}
